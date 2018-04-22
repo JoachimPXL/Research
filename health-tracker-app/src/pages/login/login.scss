@@ -1,0 +1,53 @@
+page-login {
+    text-align: center;
+    p {
+        color:color($colors, dark-blue);
+    }
+
+    ion-toolbar {
+        text-align:center;
+    }
+
+    ion-input {
+        align-self: center;
+        text-align:center;
+        font-weight: bold;
+        font-size:13pt;
+        background-color: #2C2C2C;
+        color: white;
+        margin-bottom: 15px;
+        border: none;
+        padding: 10px 25px 10px 25px;
+        border-radius: 6px;
+    }
+
+    scroll-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        color:white;
+        font-size: 14pt;
+    }
+
+    .logo {
+        width: 40%;
+        height: 30%;
+    }
+
+    .round-button {
+        border: none;
+        padding: 10px 25px 10px 25px;
+        border-radius: 50px;
+        margin-top: 1em;
+    }
+
+    .masters {
+        background-color: #2B3B4E;
+    }
+
+    .top-banner {
+        margin-top: 30%;
+    }
+}

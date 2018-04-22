@@ -1,0 +1,28 @@
+page-home {
+    ion-card {
+        position: relative;
+        text-align: center;
+    }
+    .card-title {
+        position: absolute;
+        top: 86%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #0E0B44;
+    }
+    .logo{
+        width: 40%;
+        height: 35%;
+    }
+    ion-toolbar {
+        text-align: center;
+    }
+
+    .masters {
+        background-color: #0E0B44;
+    }
+}
+
+
+

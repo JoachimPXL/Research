@@ -1,0 +1,40 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-row class="top-banner">
+      <ion-col>
+        <ion-toolbar color="dark-blue" padding>
+          <img src="assets/imgs/logo.png" class="logo">
+        </ion-toolbar>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </ion-col>
+    </ion-row>
+  </ion-header>
+  
+  <ion-content padding class="masters">
+    <ion-row>
+      <ion-col col-12>
+        <form #form="ngForm" ngNativeValidate (ngSubmit)="login(form.value)">
+          <ion-input placeholder="example@example.com" name="email" ngModel></ion-input>
+          <ion-input type="password" name="password" ngModel></ion-input>
+          <button ion-button color="secondary" class="round-button">Sign In</button>
+        </form>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <label>
+          <a [navPush]="">No account yet?</a>
+        </label>
+      </ion-col>
+    </ion-row>
+  
+  </ion-content>
+

@@ -1,0 +1,32 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-label>
+    {{selectedEmployee.firstName}}
+  </ion-label>
+  <ion-label>
+    {{selectedEmployee.lastName}}
+  </ion-label>
+  <ion-label>
+      {{selectedEmployee.points}}
+    </ion-label>
+    <ion-label>
+        {{selectedEmployee.email}}
+    </ion-label>
+    <ion-label>
+        {{selectedEmployee.Organisation['name']}}
+    </ion-label>
+</ion-content>

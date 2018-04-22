@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <!-- <button ion-item *ngFor="let employee of employees" (click)="itemSelected(employee)">
+          {{ employee.firstName }}
+        </button>   -->
+        <button ion-item *ngFor="let department of departments" (click)="itemSelected(department)">
+          {{ department.Name }}
+        </button>  
+      </ion-list>
+</ion-content>
+
