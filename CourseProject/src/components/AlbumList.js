@@ -1,23 +1,41 @@
 import React, { Component } from 'react';
 import { ScrollView, View } from 'react-native';
 import AlbumDetail from './AlbumDetail';
-import axios from 'axios';
+
 
 // Class Component
 class AlbumList extends Component {
     state = {
-        albums: []
+        movies: []
     };
 
-    componentWillMount() {
-        axios.get('https://rallycoding.herokuapp.com/api/music_albums')
-            .then(response => this.setState({ albums: response.data })); // automatically added from Component calss
+    async componentWillMount() {
+        let date = new Date();
+        console.log("after request: " + date + " ms: " + date.getMilliseconds());
+        return fetch('https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json', {
+            method: 'GET'
+        }).then(resp => { return resp.json() })
+            .then(res => {
+                console.log(res);
+
+                var date = new Date();
+                console.log("after request: " + date + " ms: " + date.getMilliseconds());
+                this.setState({ movies: res });
+
+                return res;
+            });// automatically added from Component calss
+
     }
 
     renderAlbums() {
-        return this.state.albums.map(album =>
+        if (this.state.movies != []) {
+            let date = new Date();
+            console.log("after request: " + date + " ms: " + date.getMilliseconds());
+        }
+
+        return this.state.movies.map((album, index) =>
             <View>
-                <AlbumDetail key={album.title} album={album} />
+                <AlbumDetail key={index} album={album} />
             </View>
         );
     }

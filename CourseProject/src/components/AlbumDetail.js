@@ -5,7 +5,7 @@ import CardSection from './CardSection';
 import Button from './Button';
 
 const AlbumDetail = ({ album }) => {
-    const { title, artist, thumbnail_image, image, url } = album;
+    const { title } = album; //, artist, thumbnail_image, image, url
     const {
         thumbnailStyle,
         headerContentStyle,
@@ -16,7 +16,7 @@ const AlbumDetail = ({ album }) => {
 
     return (
         <Card>
-            <CardSection>
+            {/* <CardSection>
                 <View style={thumbnailContainerStyle}>
                     <Image
                         style={thumbnailStyle}
@@ -38,7 +38,8 @@ const AlbumDetail = ({ album }) => {
                 <Button onPress={() => Linking.openURL(url)} >
                     Buy now
                 </Button>
-            </CardSection>
+            </CardSection> */}
+            <CardSection><Text>{title}</Text></CardSection>
         </Card>
     );
 };
